@@ -28,6 +28,6 @@
   <li>structの分け方、作り方。</li>
   <li>関数の作り方</li>
   <li>実機でlandscapeにするとヘッダーやtabItem部分の表示が崩れる。シュミレータでは崩れない。</li>
-  <li>警告：Result of call to calculationData.resultText is unusedがでたので _=(ワイルドカード)を入れてみた。。。</li>
+  <li>警告：Result of call to calculationData.resultText is unusedがでたので _=(ワイルドカード)を入れてみたら直った。。。</li>
 </ul>
 
