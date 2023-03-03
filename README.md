@@ -4,8 +4,7 @@
 <p>足し算と引き算アプリ。タブで計算方法が異なる画面に切り替わる。<br>
 入力が終わるとキーボードが下がる。</p>
 
-
-<img width="709" alt="kadai7" src="https://user-images.githubusercontent.com/120438170/222594357-4548b9d8-afb9-42b8-956a-7201027b886f.png">
+<img width="673" alt="kadai7" src="https://user-images.githubusercontent.com/120438170/222597796-405aa92a-c229-43dc-8e0d-e7fe8b67d6fe.png">
 
 
 ## Memo<br>
