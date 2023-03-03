@@ -27,7 +27,7 @@
   <li>Viewの分け方。計算画面とタブの枠組みで分けたつもりだが、可読性等はこれでよいのか疑問。</li>
   <li>structの分け方、作り方。</li>
   <li>関数の作り方</li>
-  <li>landscapeにするとヘッダーやtabItem部分の表示が崩れる。</li>
+  <li>実機でlandscapeにするとヘッダーやtabItem部分の表示が崩れる。シュミレータでは崩れない。</li>
   <li>警告：Result of call to calculationData.resultText is unusedがでたので _=(ワイルドカード)を入れてみた。。。</li>
 </ul>
 
