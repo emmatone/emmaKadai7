@@ -16,7 +16,7 @@ struct CalculationlcData {
 
 struct TabPageView: View {
     //メインビューで選択されているタブ名
-    @Binding var selectedTab: String
+    @Binding var selectedTab: Tab
 
     //計算要素
     @State private var calculationData = CalculationlcData()
@@ -25,7 +25,7 @@ struct TabPageView: View {
     @State var tabLabel: String
     @State var tabColor: Color
     @State var tabIcon: String
-    @State var tabTag: String
+    @State var tabTag: Tab
 
 
     func calculation(_ inputText1: String, _ inputText2: String) -> Int {
@@ -34,12 +34,10 @@ struct TabPageView: View {
         let inputNumber2 = Int(calculationData.inputText2) ?? 0
 
         switch tabTag {
-        case "substruction":
-            calculationData.resultText = inputNumber1 - inputNumber2
-            return calculationData.resultText
-        default:
-            calculationData.resultText = inputNumber1 + inputNumber2
-            return calculationData.resultText
+        case .substruction:
+            return inputNumber1 - inputNumber2
+        case .addition:
+            return inputNumber1 + inputNumber2
         }
     }
 
@@ -89,7 +87,7 @@ struct TabPageView: View {
                     //計算ボタン
                     Button("計算する"){
                         //計算と、キーボードを下げる
-                        _ = calculation(calculationData.inputText1, calculationData.inputText2)
+                        calculationData.resultText = calculation(calculationData.inputText1, calculationData.inputText2)
                         dismissKeyboard()
                     }
                     .buttonStyle(.borderedProminent)
@@ -123,11 +121,11 @@ struct TabPageView: View {
 struct TabPageView_Previews: PreviewProvider {
     static var previews: some View {
         TabPageView(
-            selectedTab: Binding.constant("addition"),
+            selectedTab: Binding.constant(.addition),
             tabLabel: "足し算",
             tabColor: .yellow,
             tabIcon: "plus.app.fill",
-            tabTag: "addition"
+            tabTag: .addition
         )
     }
 }

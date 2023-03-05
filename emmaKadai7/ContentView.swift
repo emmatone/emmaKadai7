@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+enum Tab {
+    case addition
+    case substruction
+}
+
 struct ContentView: View {
     //　タブのtagを状態変数にする
-    @State private var selectedTab = "addition"
+    @State private var selectedTab: Tab = .addition
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -19,7 +24,7 @@ struct ContentView: View {
                 tabLabel: "足し算",
                 tabColor: .green,
                 tabIcon: "plus.app.fill",
-                tabTag: "addition"
+                tabTag: .addition
             )
 
             //引き算算画面
@@ -28,7 +33,7 @@ struct ContentView: View {
                 tabLabel: "引き算",
                 tabColor: .red,
                 tabIcon: "minus.square.fill",
-                tabTag: "substruction"
+                tabTag: .substruction
             )
         }.accentColor(.black)
     }
